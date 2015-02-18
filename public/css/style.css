@@ -1,0 +1,181 @@
+
+
+body {
+    background-color:blue;
+    height: 826px;
+    width: 100%;
+    min-width: 1086px;
+    font-size:2em; 
+    line-height:58px;;
+    letter-spacing:0.5px;
+}
+
+.content{
+    width: 100%;
+    min-width: 1086px;
+    height: 826px;
+    background-color: yellow;
+}
+
+#svg {
+    background-color:white;
+}
+
+#title {
+    font-family: 'Open Sans', sans-serif;
+    fill:#fff;
+}
+
+
+div.nav-bar{
+    height: 60px;
+    width: 100%;
+    min-width: 1086px;
+    background-color: #2c3f52;
+}
+
+div.title{
+    color: white;
+    font-size: 22px;
+    line-height: 60px;
+    margin-left: 15px;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: lighter;
+}
+
+/**----------**/
+#creator text{
+    fill:#11c3ff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+#creator {
+    transition: all 1s ease;
+}
+#menu {
+    position: absolute;
+    top: 0;
+    height: 58px;
+    width: 920px;
+    min-width: 920px;
+    right: 0;
+}
+
+#menu ul{
+    margin: 0;
+    padding: 0;
+    top:0;
+    margin-right: 15px;
+    list-style-type: none;
+    text-align: right;
+}
+
+#menu ul li { 
+    top:0;
+    display: inline-block;
+    list-style-type: none;
+    vertical-align: middle;
+}
+
+#menu ul li figure{
+    margin: 0;
+    position: relative;
+}
+
+#menu ul li figcaption{
+    position: absolute;
+    top:0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#menu ul li a{
+    text-decoration: none;
+    vertical-align: middle;
+    line-height: 58px;
+    background-color: #2c3f52 ;
+    color: #ed4e6e;
+}
+
+#submenu ul{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top:250px;
+    margin-left: 0px;
+    list-style-type: none;
+}
+
+#submenu ul li { 
+    top:0;
+    margin: 0;
+    padding: 0;
+}
+
+#submenu ul li figure{
+    margin: 0;
+    position: relative;
+    height: 58px;
+}
+
+#submenu ul li figcaption{
+    position: absolute;
+    top:0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#submenu ul li a{
+    text-decoration: none;
+    vertical-align: middle;
+    background-color: #2c3f52 ;
+    color: #ed4e6e;
+}
+
+#peopleSelector {
+    position: absolute;
+    bottom: 0;
+    height: 120px;
+    width: 920px;
+    min-width: 920px;
+}
+
+#peopleSelector ul{
+    margin: 0;
+    padding: 0;
+    top:0;
+    margin-right: 15px;
+    list-style-type: none;
+    text-align: right;
+}
+
+#peopleSelector ul li { 
+    top:0;
+    display: inline-block;
+    list-style-type: none;
+    vertical-align: middle;
+}
+
+#peopleSelector ul li figure{
+    margin: 0;
+    position: relative;
+}
+
+#peopleSelector ul li figcaption{
+    position: absolute;
+    top:0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#peopleSelector ul li a{
+    text-decoration: none;
+    vertical-align: middle;
+    line-height: 58px;
+    background-color: #2c3f52 ;
+    color: #ed4e6e;
+}
+
+
+
