@@ -23,6 +23,8 @@ var people = [["Arturo Cabrera","M",264,93905,500,270,0,80,350,20,50,180,65,30,2
 ["Heather Weir","F",276,92026,540,195,0,195,480,120,70,180,75,40,240,260],
 ["Vincent Zacha-Herthel","M",262,95616,480,275,30,200,345,0,45,300,190,80,90,495]];
 
+
+
 var cores = ["#2c3f51", "#ec4e6e"];
 
 function applyFilter(param){
@@ -77,7 +79,7 @@ function creatingDataAll(filter){
     var width = 1265,
         height = 610,
         padding = 1, // separation between same-color nodes
-        clusterPadding = 50, // separation between different-color nodes
+        clusterPadding = 2, // separation between different-color nodes
         maxRadius = 10;
 
     var n = 24, // total number of nodes
@@ -92,10 +94,14 @@ function creatingDataAll(filter){
     var index = 0;
     var nodes = d3.range(n).map(function() {
 
-      var i = index++,
-          r = 27,
+      var i = index,
+//          r = 27,
+          r = people[index][filter]/9,
           d = {cluster: i, radius: r};
-      if (!clusters[i] || (r > clusters[i].radius)) clusters[i] = d;
+      if (!clusters[i] || (r > clusters[i].radius))
+          clusters[i] = d;
+        
+        index++;
       return d;
     });
     
@@ -149,7 +155,7 @@ function creatingDataAll(filter){
     function tick(e) {
       node
           .each(cluster(100 * e.alpha * e.alpha))
-          .each(collide(0.7))
+          .each(collide(0.9))
           .attr("cx", function(d) { return d.x; })
           .attr("cy", function(d) { return d.y; });
     }
