@@ -67,19 +67,6 @@
 	top: 30px;
 }
 
-
-.no-touch .cs-style-7 figure:hover figcaption h3,
-.no-touch .cs-style-7 figure:hover figcaption span,
-.no-touch .cs-style-7 figure:hover figcaption a,
-.cs-style-7 figure.cs-hover figcaption h3,
-.cs-style-7 figure.cs-hover figcaption span,
-.cs-style-7 figure.cs-hover figcaption a {
-	-webkit-transition: opacity 0.3s 0.2s;
-	-moz-transition: opacity 0.3s 0.2s;
-	transition: opacity 0.3s 0.2s;
-	opacity: 1;
-}
-
 @media screen and (max-width: 31.5em) {
 	.grid {
 		padding: 10px 10px 100px 10px;

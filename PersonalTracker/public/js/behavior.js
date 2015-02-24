@@ -26,13 +26,19 @@ var people = [["Arturo Cabrera","M",264,93905,500,270,0,80,350,20,50,180,65,30,2
 
 
 var cores = ["#2c3f51", "#ec4e6e"];
-
+var lastEdited = null;
 function applyFilter(param){
     console.log(param);
     var filterType = 0;
+    
+    if(lastEdited != null) 
+        lastEdited.attr('src', 'public/img/'+ lastEdited.attr('_notSelect')).fadeIn(800);
+    
     switch(param){
         case 'sleep':
             filterType = 4;
+            $('#img_sleep').attr('src', 'public/img/sleep-sel.png');
+            lastEdited = $('#img_sleep');
             break;
         case 'class':
             filterType = 5;
@@ -45,34 +51,47 @@ function applyFilter(param){
             break;
         case 'screen':
             filterType = 8;
+            $('#img_screen').attr('src', 'public/img/screen-sel.png');
+            lastEdited = $('#img_screen');
             break;
         case 'print':
             filterType = 9;
+            $('#img_print').attr('src', 'public/img/print-sel.png');
+            lastEdited = $('#img_print');
             break;
         case 'eating':
             filterType = 10;
-//            $('#img_eating').css("src", "public/img/eating.png");
             $('#img_eating').attr('src', 'public/img/eating-sel.png');
-//            $('#img_eating').click(function (){console.log("click");});
+            lastEdited = $('#img_eating');
             break;
         case 'music':
             filterType = 11;
+            $('#img_music').attr('src', 'public/img/music-sel.png');
+            lastEdited = $('#img_music');
             break;
         case 'exercise':
             filterType = 12;
+            $('#img_exercise').attr('src', 'public/img/exercises-sel.png');
+            lastEdited = $('#img_exercise');
             break;
         case 'traveling':
             filterType = 13;
+            $('#img_traveling').attr('src', 'public/img/traveling-sel.png');
+            lastEdited = $('#img_traveling');
             break;
         case 'personal':
+            $('#img_personal').attr('src', 'public/img/personal-sel.png');
             filterType = 14;
+            lastEdited = $('#img_personal');
             break;
         case 'social':
             filterType = 15;
+            $('#img_social').attr('src', 'public/img/personal-sel.png');
+            lastEdited = $('#img_social');
             break;
     }
     
-    
+    lastEdited.fadeIn(800);
     $('#svg').empty();
     creatingDataAll(filterType);
 }

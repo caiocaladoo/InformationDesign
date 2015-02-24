@@ -28,7 +28,7 @@ body {
 
 
 div.nav-bar{
-    height: 60px;
+    height: 78px;
     width: 100%;
     min-width: 1086px;
     background-color: #2c3f52;
@@ -37,7 +37,7 @@ div.nav-bar{
 div.title{
     color: white;
     font-size: 22px;
-    line-height: 60px;
+    line-height: 78px;
     margin-left: 15px;
     font-family: 'Permanent Marker', cursive;
     font-weight: lighter;
@@ -55,7 +55,7 @@ div.title{
 }
 #menu {
     position: absolute;
-    top: 0;
+    top: 10px;
     height: 58px;
     width: 920px;
     min-width: 920px;
@@ -93,7 +93,6 @@ div.title{
 #menu ul li a{
     text-decoration: none;
     vertical-align: middle;
-    line-height: 58px;
     background-color: #2c3f52 ;
     color: #ed4e6e;
 }

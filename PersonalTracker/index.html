@@ -9,8 +9,6 @@
         
         
         <title>Caio | Personal Tracker</title>
-<!--        <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>-->
-<!--        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>-->
         <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="public/css/normalize.css"/>
 	    <link rel="stylesheet" href="public/css/style.css" />
@@ -29,7 +27,7 @@
                         <li>
                             <a onclick="applyFilter('sleep')" href="javascript:void(0);">
                                 <figure>
-                                    <img src="public/img/eyes.png" alt="Sleeping">
+                                    <img id="img_sleep" src="public/img/sleep.png" _select='sleep-sel.png' _notSelect='sleep.png' alt="Sleeping">
                                     <figcaption>
                                         <h6>Sleeping</h6>
                                     </figcaption>
@@ -69,7 +67,7 @@
                         <li>
                             <a onclick="applyFilter('screen')" href="javascript:void(0);">
                                 <figure>
-                                    <img src="public/img/screen.png" alt="Sleeping">
+                                    <img id="img_screen" src="public/img/screen.png" _select='screen-sel.png' _notSelect='screen.png' alt="Screen">
                                     <figcaption>
                                         <h6>Screen</h6>
                                     </figcaption>
@@ -79,7 +77,7 @@
                         <li>
                             <a onclick="applyFilter('print')" href="javascript:void(0);">
                                 <figure>
-                                    <img src="public/img/print.png" alt="Print">
+                                    <img id='img_print' src="public/img/print.png" _select='print-sel.png' _notSelect='print.png' alt="Print">
                                     <figcaption>
                                         <h6>Print</h6>
                                     </figcaption>
@@ -89,7 +87,7 @@
                         <li>
                             <a onclick="applyFilter('eating')" href="javascript:void(0);">
                                 <figure>
-                                    <img id='img_eating' src="public/img/eating.png" alt="Eating">
+                                    <img id='img_eating' src="public/img/eating.png" _select='eating-sel.png' _notSelect='eating.png' alt="Eating">
                                     <figcaption>
                                         <h6>Eating</h6>
                                     </figcaption>
@@ -99,7 +97,7 @@
                         <li>
                             <a onclick="applyFilter('music')" href="javascript:void(0);">
                                 <figure>
-                                    <img src="public/img/music.png" alt="Music">
+                                    <img id='img_music' src="public/img/music.png" _select='music-sel.png' _notSelect='music.png' alt="Music">
                                     <figcaption>
                                         <h6>Music</h6>
                                     </figcaption>
@@ -109,7 +107,7 @@
                         <li>
                             <a onclick="applyFilter('exercise')" href="javascript:void(0);">
                                 <figure>
-                                    <img src="public/img/exercises.png" alt="Sleeping">
+                                    <img id='img_exercise' src="public/img/exercises.png" _select='exercises-sel.png' _notSelect='exercises.png' alt="Sleeping">
                                     <figcaption>
                                         <h6>Exercise</h6>
                                     </figcaption>
@@ -119,7 +117,7 @@
                         <li>
                             <a onclick="applyFilter('traveling')" href="javascript:void(0);">
                                 <figure>
-                                    <img src="public/img/traveling.png" alt="Traveling">
+                                    <img id="img_traveling" src="public/img/traveling.png" _select='traveling-sel.png' _notSelect='traveling.png' alt="Traveling">
                                     <figcaption>
                                         <h6>Traveling</h6>
                                     </figcaption>
@@ -129,7 +127,7 @@
                         <li>
                             <a onclick="applyFilter('personal')" href="javascript:void(0);">
                                 <figure>
-                                    <img src="public/img/personal.png" alt="Sleeping">
+                                    <img id="img_personal" src="public/img/personal.png" _select='personal-sel.png' _notSelect='personal.png' alt="Sleeping">
                                     <figcaption>
                                         <h6>Personal</h6>
                                     </figcaption>
@@ -139,7 +137,7 @@
                         <li>
                             <a onclick="applyFilter('social')" href="javascript:void(0);">
                                 <figure>
-                                    <img src="public/img/social.png" alt="Social">
+                                    <img id='img_social' src="public/img/social.png"  _select='social-sel.png' _notSelect='social.png' alt="Social">
                                     <figcaption>
                                         <h6>Social</h6>
                                     </figcaption>
@@ -247,7 +245,7 @@
             </svg>
         </div>
         
-        <script src="//use.typekit.net/pus8lcq.js"></script>
+<!--        <script src="//use.typekit.net/pus8lcq.js"></script>-->
         <script>try{Typekit.load();}catch(e){}</script>
         <script src="public/d3/d3.v352.js"></script>
         <script src="public/js/jquery-2.1.1.js"></script>
