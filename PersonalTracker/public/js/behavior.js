@@ -51,6 +51,9 @@ function applyFilter(param){
             break;
         case 'eating':
             filterType = 10;
+//            $('#img_eating').css("src", "public/img/eating.png");
+            $('#img_eating').attr('src', 'public/img/eating-sel.png');
+//            $('#img_eating').click(function (){console.log("click");});
             break;
         case 'music':
             filterType = 11;
@@ -76,7 +79,7 @@ function applyFilter(param){
 
 function creatingDataAll(filter){
     console.log("usar o filtro: " + filter);
-    var width = 1265,
+    var width = 1286,
         height = 610,
         padding = 1, // separation between same-color nodes
         clusterPadding = 2, // separation between different-color nodes
