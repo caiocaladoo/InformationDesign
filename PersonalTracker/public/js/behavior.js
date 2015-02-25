@@ -12,10 +12,10 @@ var people = [["Arturo Cabrera","M",264,93905,500,270,0,80,350,20,50,180,65,30,2
 ["Kevin Lloyd","M",270,95678,490,170,0,185,500,30,70,320,30,80,115,110],
 ["Alycia Luce","F",292,95969,420,255,120,65,690,65,35,250,30,50,115,110],
 ["Zachary Magno","M",301,93105,420,295,0,120,655,60,60,330,90,140,390,240],
-["Filipe Marques de Moura","M",255,95926,510,290,0,30,320,50,55,50,90,0,90,90],
+["Filipe Marques","M",255,95926,510,290,0,30,320,50,55,50,90,0,90,90],
 ["Hye Jung Moon","F",292,95928,420,240,0,60,30,120,90,0,0,0,200,480],
 ["Ryan Oakes","M",279,95682,470,0,540,25,95,3,34,510,92,16,45,390],
-["Caio Pereira Calado","M",266,95926,360,270,180,150,720,60,110,500,180,40,90,120],
+["Caio Calado","M",266,95926,360,270,180,150,720,60,110,500,180,40,90,120],
 ["Edgar Ruiz","M",247,956363,520,300,15,262,575,5,95,720,0,85,308,55],
 ["Lucas Sales","M",304,95926,408,220,0,90,450,30,180,210,120,40,90,120],
 ["Amanda Sliva","F",245,93555,595,225,0,120,330,30,105,75,75,75,336,456],
@@ -98,7 +98,7 @@ function applyFilter(param){
 
 function creatingDataAll(filter){
     console.log("usar o filtro: " + filter);
-    var width = 1286,
+    var width = 1250,
         height = 610,
         padding = 1, // separation between same-color nodes
         clusterPadding = 2, // separation between different-color nodes
@@ -155,14 +155,16 @@ function creatingDataAll(filter){
         .data(nodes)
       .enter().append("circle")
         .attr("id", function(d,i) {
-            return 'item'+i;})
-        
+            return i;})
         .style("fill", function(d, i) {
             return people[i][1] == "M"? cores[0] : cores[1];    
-
         })
-        .on('click', function(d){
-            console.log(this);
+        .on('mouseover', function(d, i){
+            var person = people[this.id];
+            display(person[0], person[1], person[filter]);
+        })
+        .on('mouseout', function(d){
+            displayHide();
         })
         .call(force.drag)
         .attr("r", function(d,i){
@@ -230,6 +232,26 @@ function creatingDataAll(filter){
     }
 }
 
+function display(name, type, dataValue){
+    
+    if(type == 'M'){
+        $('#divboy').css('background-color', '#2c3f52');
+        $('#displayboy').text(name + " (" + dataValue +")");
+    }else{
+        //for Female!
+        $('#divgirl').css('background-color', '#ed4e6e');
+        $('#displaygirl').text(name + " (" + dataValue +")");
+    }
+}
+
+function displayHide(){
+    //hiding all elements
+    $('#divgirl').css('background-color', 'transparent ');
+    $('#divboy').css('background-color', 'transparent ');
+    $('#displaygirl').css('background-color', 'transparent ');
+    $('#displaygirl').text("");
+    $('#displayboy').text("");
+}
 
 
 window.onload = function() {
